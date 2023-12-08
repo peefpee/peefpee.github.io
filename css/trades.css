@@ -1,0 +1,21 @@
+body {
+    background: #2B333D;
+    & h1 {
+        color:white;
+        text-align: center;
+    }
+    & ul li{
+        color:white;
+    }
+
+}
+.btn {
+    background: red;
+    color: white;
+    border-radius: 12px;
+    height: 30px;
+    transition: 1s;
+}
+.btn:disabled{
+    background: orange;
+}

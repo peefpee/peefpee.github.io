@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pfp trading protfolio</title>
+    <link rel="stylesheet" href="css/trades.css" class="ref">
+</head>
+<body>
+<script>
+    function json(){
+        let obj = {"gists": [{"trade":1},{"trade":2}]}
+
+        let li = document.getElementById('list');
+        obj.gists.forEach( e => {
+            let ele = document.createElement('li')
+            ele.innerHTML = `${JSON.stringify(e).replace(/[{}]/g,'')}`
+            li.appendChild(ele);
+        })
+        let btn = document.getElementById("tradesbutton");
+        btn.disabled = true ;
+        btn.textContent = "Done"
+    }
+
+</script>
+<h1>Trades</h1>
+<ul>
+    <li id="list" ></li>
+</ul>
+<button onclick="json()" id="tradesbutton" class="btn">Load trades</button>
+
+
+
+
+
+</body>
+</html>
